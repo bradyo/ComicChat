@@ -1,0 +1,7 @@
+h1 Rooms
+ul
+    for room in rooms
+        li
+            a(href="/rooms/" + room._id) room #{room._id}
+    else
+        li no rooms

@@ -1,0 +1,18 @@
+h1 Room #{result._id}
+
+h2 Users in room:
+ul
+    for user in result.users
+        li= user
+    else
+        li no users in room
+
+h2 chat panels:
+for panel in result.panels
+    .panel
+        .avatar
+            p #{panel.userId} :#{panel.emotion}:
+        .message
+            p (#{panel.created}) #{panel.message}
+else
+    li no messages
